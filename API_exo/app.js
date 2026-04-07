@@ -9,10 +9,9 @@ async function pickColor() {
   
   try {
     const result = await eyeDropper.open();
-    // result.sRGBHex contient le code couleur (ex: #ff0000)
     document.body.style.backgroundColor = result.sRGBHex;
     console.log("Couleur choisie :", result.sRGBHex);
   } catch (err) {
-    console.log("L'utilisateur a annulé la sélection");
+    console.log("erreur");
   }
 }
